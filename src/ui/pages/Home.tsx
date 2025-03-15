@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import Button from "../atoms/button";
-import Footer from "../molecules/Footer";
 import Pokedex from "../atoms/Pokedex";
+import Footer from "../molecules/Footer";
 
 const Home = () => {
   return (
