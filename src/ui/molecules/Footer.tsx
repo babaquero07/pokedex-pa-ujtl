@@ -1,9 +1,16 @@
 import { FaCode, FaGithub } from "react-icons/fa";
 
-const Footer = () => {
+interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
+
+const Footer = ({ className = "", ...props }: FooterProps) => {
   // TODOL: Refactor repeated code
   return (
-    <footer className="h-[25vh] bg-gray-300 py-16 md:py-8 flex flex-col items-center gap-8 md:flex-row md:justify-around md:gap-0">
+    <footer
+      className={`h-[25vh] py-16 md:py-8 flex flex-col items-center gap-8 md:flex-row md:justify-around md:gap-0 ${className}`}
+      {...props}
+    >
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold">Integrantes</h2>
         <ul className="flex flex-col gap-1">
