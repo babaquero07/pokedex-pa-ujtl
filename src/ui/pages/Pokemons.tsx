@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_POKEMONS } from "../../queries/getPokemons";
 import { MappedPokemon, PokemonV2Pokemon } from "../../interfaces/pokeApi";
 import Loading from "../molecules/Loading";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import PokemonCard from "../molecules/PokemonCard";
 
 const gqlVariables = {
@@ -48,15 +48,6 @@ const Pokemons = () => {
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
       </ul>
-
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </>
   );
 };

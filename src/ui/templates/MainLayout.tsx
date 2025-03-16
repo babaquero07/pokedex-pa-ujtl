@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 import Header from "../molecules/Header";
+import SearchModal from "../molecules/SearchModal";
+import { ToastContainer } from "react-toastify";
 
 const MainLayout = () => {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState<boolean>(false);
 
-  const handleSearchModal = () => {
+  const handleCloseSearchModal = () => {
     setIsSearchModalOpen((prev) => !prev);
   };
 
@@ -14,14 +16,14 @@ const MainLayout = () => {
   ) => {
     if (event.ctrlKey && event.key === "k") {
       event.preventDefault();
-      handleSearchModal();
+      handleCloseSearchModal();
     }
   };
 
   const keyDownHandler = (event: KeyboardEvent) => {
     if (event.ctrlKey && event.key === "k") {
       event.preventDefault();
-      handleSearchModal();
+      handleCloseSearchModal();
     }
   };
 
@@ -36,7 +38,7 @@ const MainLayout = () => {
   return (
     <div className="lg:max-w-[816px] lg:mx-auto lg:px-8 lg:pb-16">
       <Header
-        handleSearchModal={handleSearchModal}
+        handleSearchModal={handleCloseSearchModal}
         handleButtonKeyDown={handleButtonKeyDown}
       />
 
@@ -44,7 +46,18 @@ const MainLayout = () => {
         <Outlet />
       </main>
 
-      {/* {isSearchModalOpen && <SearchModal />} */}
+      {isSearchModalOpen && (
+        <SearchModal onCloseModal={handleCloseSearchModal} />
+      )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
