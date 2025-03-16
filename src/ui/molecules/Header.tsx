@@ -14,9 +14,7 @@ const Header = ({
   handleButtonKeyDown,
 }: HeaderProps) => {
   return (
-    <header
-      className={`px-8 py-6 flex justify-between items-center ${className}`}
-    >
+    <header className={`py-6 flex justify-between items-center ${className}`}>
       <Button>
         <Link to="/pokemon" className="flex items-center gap-2">
           <MdCatchingPokemon className="text-2xl" />
