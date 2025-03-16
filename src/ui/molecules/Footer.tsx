@@ -52,7 +52,7 @@ const Footer = ({ className = "", ...props }: FooterProps) => {
           <FaCode className="text-2xl text-red-700" />
           <a
             className="hover:underline"
-            href="https://github.com/juanpabon1/pokemon-app"
+            href="https://github.com/babaquero07/pokedex-pa-ujtl"
             target="_blank"
           >
             Pokedex - PA - UJTL
