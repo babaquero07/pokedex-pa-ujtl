@@ -8,7 +8,7 @@ interface PokeMonTypeTagsProps {
 
 const PokemonTypeTag = ({ pokemonType }: PokeMonTypeTagsProps) => {
   return (
-    <Link to={`/pokemon/types/${pokemonType.name}`}>
+    <div className="relative z-10">
       <Button
         className={`bg-transparent rounded-[12px]`}
         style={{
@@ -22,7 +22,11 @@ const PokemonTypeTag = ({ pokemonType }: PokeMonTypeTagsProps) => {
           <span className="text-sm capitalize">{pokemonType.name}</span>
         </div>
       </Button>
-    </Link>
+      <Link
+        className="absolute inset-0"
+        to={`/pokemon/types/${pokemonType.name}`}
+      />
+    </div>
   );
 };
 
