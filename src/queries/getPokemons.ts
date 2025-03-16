@@ -17,3 +17,15 @@ export const GET_POKEMONS = gql`
     }
   }
 `;
+
+export const GET_ALL_POKEMONS = gql`
+  query getAllPokemons {
+    pokemon_v2_pokemon {
+      id
+      name
+      pokemon_v2_pokemonsprites {
+        sprites
+      }
+    }
+  }
+`;
