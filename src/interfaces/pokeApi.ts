@@ -157,3 +157,27 @@ export interface MappedPokemon {
   types: string[];
   image: string;
 }
+
+export interface PokemonDetail extends MappedPokemon {
+  height: number;
+  weight: number;
+  abilities: { name: string }[];
+  stats: { name: string; value: number }[];
+}
+
+export interface PokemonAbility {
+  pokemon_v2_ability: PokemonV2Ability;
+}
+
+export interface PokemonV2Ability {
+  name: string;
+}
+
+export interface PokemonStat {
+  base_stat: number;
+  pokemon_v2_stat: PokemonV2Stat;
+}
+
+export interface PokemonV2Stat {
+  name: string;
+}
