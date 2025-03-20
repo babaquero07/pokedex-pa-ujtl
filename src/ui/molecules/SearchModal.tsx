@@ -124,6 +124,7 @@ const SearchModal = ({ onCloseModal }: SearchModalProps) => {
                       <li
                         className="relative z-10 rounded-lg px-2 py-3 hover:bg-white flex items-center gap-3 cursor-pointer"
                         key={type.name}
+                        onClick={onCloseModal}
                       >
                         <div
                           className="text-[20px] rounded-full"
@@ -152,6 +153,7 @@ const SearchModal = ({ onCloseModal }: SearchModalProps) => {
                       <li
                         key={pokemon.id}
                         className="relative z-10 rounded-lg px-2 py-3 hover:bg-white flex items-center justify-between cursor-pointer"
+                        onClick={onCloseModal}
                       >
                         <div className="flex items-center gap-2">
                           <img

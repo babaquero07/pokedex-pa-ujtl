@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import PokemonCard from "../molecules/PokemonCard";
 
 const gqlVariables = {
-  limit: 10,
+  limit: 500,
   offset: 0,
 };
 

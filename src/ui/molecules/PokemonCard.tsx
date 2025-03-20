@@ -8,9 +8,14 @@ import PokemonTypeTag from "../atoms/PokemonTypeTag";
 interface PokemonCardProps {
   pokemon: MappedPokemon;
   className?: string;
+  children?: React.ReactNode;
 }
 
-const PokemonCard = ({ pokemon, className = "" }: PokemonCardProps) => {
+const PokemonCard = ({
+  pokemon,
+  className = "",
+  children,
+}: PokemonCardProps) => {
   const { getPokemonIdText, pokemonTypes } = usePokemon();
 
   return (
@@ -25,12 +30,14 @@ const PokemonCard = ({ pokemon, className = "" }: PokemonCardProps) => {
       <span className="w-[60px] text-center absolute top-[-16px] right-[14px] bg-white rounded-[12px] font-bold border border-b-3 border-r-3 border-solid border-black">
         {getPokemonIdText(pokemon.id)}
       </span>
-      <img
-        src={pokemon.image}
-        alt={pokemon.name}
-        loading="lazy"
-        className="object-contain "
-      />
+      <div className="flex-1 flex justify-center items-center overflow-hidden">
+        <img
+          src={pokemon.image}
+          alt={pokemon.name}
+          loading="lazy"
+          className="block w-full h-full object-contain p-1"
+        />
+      </div>
       <div className="flex flex-col gap-2">
         <h2 className="text-lg font-bold capitalize">{pokemon.name}</h2>
         <div className="flex gap-2">
@@ -45,6 +52,7 @@ const PokemonCard = ({ pokemon, className = "" }: PokemonCardProps) => {
           })}
         </div>
       </div>
+      {children && children}
       <Link className="absolute inset-0" to={`/pokemon/${pokemon.name}`} />
     </li>
   );
