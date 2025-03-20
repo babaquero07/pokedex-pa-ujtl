@@ -1,6 +1,6 @@
-import Button from "../atoms/button";
 import { Link } from "react-router";
 import { MdCatchingPokemon, MdKeyboardCommandKey } from "react-icons/md";
+import Button from "../atoms/Button";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;

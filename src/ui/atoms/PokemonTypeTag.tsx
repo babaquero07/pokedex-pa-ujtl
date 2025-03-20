@@ -1,6 +1,5 @@
-import React from "react";
+import Button from "./Button";
 import { Link } from "react-router";
-import Button from "./button";
 
 interface PokeMonTypeTagsProps {
   pokemonType: { name: string; color: string; icon: React.ReactNode };
