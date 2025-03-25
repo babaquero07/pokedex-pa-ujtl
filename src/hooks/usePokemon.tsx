@@ -10,6 +10,7 @@ import { PiNut } from "react-icons/pi";
 import { WiSnowflakeCold } from "react-icons/wi";
 
 const getPokemonIdText = (id: number): string => {
+  console.log("🚀 ~ getPokemonIdText ~ id:", id);
   if (id > 9 && id < 99) return `#0${id}`;
   if (id > 99) return `#${id}`;
 

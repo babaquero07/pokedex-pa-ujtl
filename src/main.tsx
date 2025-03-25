@@ -7,6 +7,7 @@ import Home from "./ui/pages/Home";
 import MainLayout from "./ui/templates/MainLayout";
 import Pokemons from "./ui/pages/Pokemons";
 import Pokemon from "./ui/pages/Pokemon";
+import PokemonsByType from "./ui/pages/PokemonsByType";
 
 import "./index.css";
 
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
           <Route element={<MainLayout />}>
             <Route path="/pokemon" element={<Pokemons />} />
             <Route path="/pokemon/:name" element={<Pokemon />} />
+            <Route path="/pokemon/types/:type" element={<PokemonsByType />} />
           </Route>
         </Routes>
       </BrowserRouter>

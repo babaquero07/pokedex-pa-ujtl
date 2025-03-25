@@ -27,7 +27,7 @@ const PokemonCard = ({
         } as React.CSSProperties
       }
     >
-      <span className="w-[60px] text-center absolute top-[-16px] right-[14px] bg-white rounded-[12px] font-bold border border-b-3 border-r-3 border-solid border-black">
+      <span className="px-2 text-center absolute top-[-16px] right-[14px] bg-white rounded-[12px] font-bold border border-b-3 border-r-3 border-solid border-black">
         {getPokemonIdText(pokemon.id)}
       </span>
       <div className="flex-1 flex justify-center items-center overflow-hidden">
