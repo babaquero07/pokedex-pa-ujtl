@@ -7,7 +7,7 @@ const Pokedex = ({ className, ...props }: PokedexProps) => {
     <img
       src="/images/pokeball.png"
       alt="pokeball"
-      className={`w-[300px] sm:w-[500px] absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[45%] animate-bounce ${className}`}
+      className={`w-[250px] sm:w-[300px] absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%] sm:animate-bounce ${className}`}
       {...props}
     />
   );
