@@ -24,26 +24,26 @@ const Footer = ({ className = "", ...props }: FooterProps) => {
               Alexander Baquero
             </a>
           </li>
-          {/* <li className="flex items-center gap-2">
-              <FaGithub />
-              <a
-                className="hover:underline"
-                href="https://github.com/sepas8"
-                target="_blank"
-              >
-                Sebastian
-              </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <FaGithub />
-              <a
-                className="hover:underline"
-                href="https://github.com/juanpabon1"
-                target="_blank"
-              >
-                Alexander Herrera
-              </a>
-            </li> */}
+          <li className="flex items-center gap-2">
+            <FaGithub />
+            <a
+              className="hover:underline"
+              href="https://github.com/sepas8"
+              target="_blank"
+            >
+              Sebastian
+            </a>
+          </li>
+          <li className="flex items-center gap-2">
+            <FaGithub />
+            <a
+              className="hover:underline"
+              href="https://github.com/pedroHerrera"
+              target="_blank"
+            >
+              Alexander Herrera
+            </a>
+          </li>
         </ul>
       </div>
       <div className="flex flex-col gap-4">
